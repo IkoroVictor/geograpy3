@@ -55,8 +55,8 @@ class PlaceContext(object):
              time_zone TEXT)'''
         cur.execute(table_creation)
         cur_dir = os.path.dirname(os.path.realpath(inspect.stack()[0][1]))
-        with open(cur_dir + "/data/GeoLite2-City-Locations.csv", "r", encoding = 'utf8') as info:
-            reader = csv.reader(info)
+        with open(cur_dir + "/data/GeoLite2-City-Locations-en_20220419.csv", "r", encoding = 'utf8') as info:
+            reader = csv.reader(info, delimiter=';')
             for row in reader:
                 cur.execute("INSERT INTO cities VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", row)
 
@@ -90,8 +90,7 @@ class PlaceContext(object):
     def is_a_country(self, s): 
         s = self.correct_country_mispelling(s)
         try:
-            pycountry.countries.get(name=s)
-            return True
+            return pycountry.countries.get(name=s) is not None
         except KeyError:
             return False
 
