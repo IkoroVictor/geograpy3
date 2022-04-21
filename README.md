@@ -10,8 +10,8 @@ Geograpy3 fixes issues caused by using Geograpy with later versions of Python 3 
 Grab the package using `pip` and `git` (this could take a few minutes)
 Try using one of the following:
 
-    1. pip install git+git://github.com/jmbielec/geograpy3.git 
-    2. pip install git+https://github.com/jmbielec/geograpy3.git 
+    1. pip install git+git://github.com/IkoroVictor/geograpy3.git 
+    2. pip install git+https://github.com/IkoroVictor/geograpy3.git 
 
 ## Getting Started
 
