@@ -53,5 +53,3 @@ def testExtractor():
     assert u'São Paulo' in e6.places
     
     print('Tests passed.')
-
-testExtractor()
